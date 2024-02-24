@@ -24,6 +24,9 @@
 
 .reply-1>div>span>p{
     transform: scale(1.5);
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .reply-1>div>span>p:hover{
