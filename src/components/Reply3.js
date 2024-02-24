@@ -17,7 +17,7 @@ const Reply2 = ({c , mainIndex, reply1Index , reply2Index}) => {
 
 const deleteHandler = () => {
     const commentCopy = [...comment];
-    commentCopy[mainIndex].replies[reply2Index].replies.splice(reply1Index,1);
+    commentCopy[mainIndex].replies[reply1Index].replies.splice(reply2Index,1);
     commentCopy[mainIndex].replyCount -= 1; 
     setComment(commentCopy);
     localStorage.setItem("commentInfo", JSON.stringify(commentCopy));
