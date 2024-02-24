@@ -18,7 +18,7 @@ const customStyles = {
 
 const Reply1 = ({c , index}) => {
     const {comment, setComment } = CommentState();
-    const [isStar , setIsStar] = useState(c.isStared);
+    const [isStar , setIsStar] = useState(c.isStared ? false : true);
     const [reply2 , setReply2] = useState("");
 
     const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -32,11 +32,11 @@ const Reply1 = ({c , index}) => {
     }
 
     const handleStaring = async() => {
-            setIsStar(!isStar);
-            const commentCopy = [...comment];
-            commentCopy[index].isStared = isStar;
-            setComment(commentCopy);
-            localStorage.setItem("commentInfo", JSON.stringify(commentCopy));
+        setIsStar(!isStar);
+      const commentCopy = [...comment];
+      commentCopy[index].isStared = isStar;
+      setComment(commentCopy);
+      localStorage.setItem("commentInfo", JSON.stringify(commentCopy));
     }
 
     const deleteHandler = () => {

@@ -18,7 +18,7 @@ const customStyles = {
 
 const Reply2 = ({c , mainIndex, reply1Index}) => {
     const {comment, setComment } = CommentState();
-    const [isStar , setIsStar] = useState(c.isStared);
+    const [isStar , setIsStar] = useState(comment[mainIndex].replies[reply1Index].isStared ? false : true);
     const [reply3 , setReply3] = useState("");
 
     const [modalIsOpen, setIsOpen] = React.useState(false);

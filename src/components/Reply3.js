@@ -5,7 +5,7 @@ import { CommentState } from "../context/CommentProvider";
 
 const Reply2 = ({c , mainIndex, reply1Index , reply2Index}) => {
     const {comment, setComment } = CommentState();
-    const [isStar , setIsStar] = useState(c.isStared);
+    const [isStar , setIsStar] = useState(comment[mainIndex].replies[reply1Index].replies[reply2Index].isStared ? false : true);
 
     const handleStaring = () => {
         setIsStar(!isStar);
