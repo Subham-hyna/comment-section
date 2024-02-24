@@ -40,13 +40,18 @@ const Home = () => {
 
     useEffect(()=>{
         if(sortby === "l2o"){
-            const commentCopy = [...comment];
+            const commentCopy = [...JSON.parse(localStorage.getItem("commentInfo"))];
             commentCopy.reverse();
             setComment(commentCopy);
         }
 
+        if(sortby === "o2l"){
+            const commentCopy = [...JSON.parse(localStorage.getItem("commentInfo"))];
+            setComment(commentCopy);
+        }
+
         if( sortby === "replies"){  
-            const commentCopy = [...comment];
+            const commentCopy = [...JSON.parse(localStorage.getItem("commentInfo"))];
             commentCopy.sort( (a,b) => b.replyCount - a.replyCount );
             setComment(commentCopy);
         }
@@ -70,6 +75,7 @@ const Home = () => {
                 <select value={sortby} onChange={(e)=>(setSortBy(e.target.value))}>
             <option value="" >Sort By</option>
             <option value="l2o" >Latest Comments</option>
+            <option value="o2l" >Older Comments</option>
             <option value="replies" >Most Replies</option>
           </select>
             </div>

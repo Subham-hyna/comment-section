@@ -40,8 +40,8 @@ const Reply2 = ({c , mainIndex, reply1Index}) => {
 
 const deleteHandler = () => {
     const commentCopy = [...comment];
-    let subReplyCount = commentCopy[mainIndex].replies.length ;
-    // subReplyCount > 0 ? subReplyCount=subReplyCount+1 : subReplyCount=1;
+    let subReplyCount = commentCopy[mainIndex].replies[reply1Index].replies.length ;
+    subReplyCount > 0 ? subReplyCount=subReplyCount+1 : subReplyCount=1;
     commentCopy[mainIndex].replies.splice(reply1Index,1);
     commentCopy[mainIndex].replyCount -= subReplyCount;
     setComment(commentCopy);
