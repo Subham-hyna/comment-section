@@ -88,3 +88,21 @@
     padding: 10px 5px;
     border-radius: 10px;
 }
+
+@media screen and (max-width : 650px) {
+    .sort-by{
+        flex-direction: column !important;
+    } 
+    .sort-by>div{
+        flex-direction: column;
+    }
+    .post-comment>input{
+        padding: 44px 20px;
+    }
+    .post-comment>h2{
+        font-size: 20px;
+    }
+    .comment-home{
+        padding: 50px 20px;
+    }
+}

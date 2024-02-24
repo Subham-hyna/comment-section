@@ -18,6 +18,8 @@
     font-size: 14px;
     font-family: "Roboto",sans-serif;
     font-weight: 400;
+    width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .reply-1>div>span>p{
@@ -33,6 +35,8 @@
     justify-content: flex-end;
     gap: 20px;
     align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .reply-1>span>button{
@@ -85,4 +89,13 @@
     width: 85%;
     border: none !important;
     margin-left: auto ;
+}
+
+@media screen and (max-width : 650px) {
+    .reply-1{
+        width: 100%;
+    }
+        .reply-3>span>p{
+            font-size: 12px
+        };
 }

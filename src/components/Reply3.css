@@ -19,6 +19,8 @@
     font-size: 14px;
     font-family: "Roboto",sans-serif;
     font-weight: 400;
+    width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .reply-3>div>span>p{
@@ -57,4 +59,10 @@
     width: 85%;
     border: none !important;
     margin-left: auto ;
+}
+
+@media screen and (max-width : 650px) {
+    .reply-3>span>p{
+        font-size: 12px
+    };
 }
