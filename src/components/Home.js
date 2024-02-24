@@ -45,10 +45,6 @@ const Home = () => {
             setComment(commentCopy);
         }
 
-        if( sortby === "o2l"){
-            setComment(JSON.parse(localStorage.getItem("commentInfo")));
-        }
-
         if( sortby === "replies"){  
             const commentCopy = [...comment];
             commentCopy.sort( (a,b) => b.replyCount - a.replyCount );
@@ -73,7 +69,6 @@ const Home = () => {
                 <p>Sort According to</p>
                 <select value={sortby} onChange={(e)=>(setSortBy(e.target.value))}>
             <option value="" >Sort By</option>
-            <option value="o2l" >Oldest Comments </option>
             <option value="l2o" >Latest Comments</option>
             <option value="replies" >Most Replies</option>
           </select>
